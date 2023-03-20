@@ -36,6 +36,7 @@ foreach ($result['data']['results'] as $k => $row) {
     $data[$k]['译名'] = $notion->fieldShow($row['properties']['译名']);
     $data[$k]['进度'] = $notion->fieldShow($row['properties']['进度']);
     $data[$k]['编辑'] = $notion->fieldShow($row['properties']['最近编辑']);
+    $data[$k]['操作'] = '操作';
     $data[$k]['推荐度'] = $notion->fieldShow($row['properties']['推荐度']);
     $data[$k]['更新'] = $notion->fieldShow($row['properties']['更新']);
     $data[$k]['特别篇'] = $notion->fieldShow($row['properties']['特别篇']);
