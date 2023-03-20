@@ -360,12 +360,12 @@
         $('.btn-prev').on('click', function () {
             let old = $(this).attr('data-old');
             let id = $(this).attr('data-id');
-            animeEdit(id, old - 1);
+            animeEdit(id, Number(old) - 1);
         });
         $('.btn-next').on('click', function () {
             let old = $(this).attr('data-old');
             let id = $(this).attr('data-id');
-            animeEdit(id, old + 1);
+            animeEdit(id, Number(old) + 1);
         });
     }
 

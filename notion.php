@@ -4,7 +4,7 @@ require_once 'Common.php';
 $notion = new NotionAPI(NOTION_SECRET);
 $action = Tools::getValue('action', 'list');
 if ($action == 'edit') {
-    $id = Tools::getValueInt('id');
+    $id = Tools::getValue('id');
     $number = Tools::getValueInt('number');
     $params = array(
         'properties' => array(
