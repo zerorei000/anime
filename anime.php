@@ -13,7 +13,7 @@
     <thead></thead>
     <tbody></tbody>
 </table>
-<div class="fakeloader"></div>
+<div class="fake-loader"></div>
 </body>
 <script src="<?php echo SITE_URL ?>/scripts/anime.js"></script>
 </html>

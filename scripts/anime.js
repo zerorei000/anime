@@ -1,18 +1,14 @@
-$('.fakeloader').fakeLoader().fadeIn();
+$('.fake-loader').fakeLoader().fadeIn();
 
-//数据替换成自己需要用的数据
-let data = []
-
-//直接把表头和表内全部载入
 let addTable = function (features) {
     let head = "";
     let body = "";
     let num = 0;
-    let width = $("table").width() - 20;
     head += '<tr>';//编写表头
     for (let j in features[0]) {
         head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
     }
+    let width = $("table").width() - num * 2;
     head += '</tr>';
     for (let i = 0, len = features.length; i < len; i++) {//编写表格
         body += '<tr>';
@@ -50,17 +46,21 @@ let animeList = function () {
         type: "GET",
         url: "https://zerorei.top/anime/notion.php?action=list",
         dataType: "jsonp",
+        beforeSend: function () {
+            $('.fake-loader').fadeIn();
+        },
+        complete: function () {
+            $('.fake-loader').fadeOut();
+        },
         success: function (result) {
             if (result.code === 0) {
                 addTable(result.data);
             } else {
                 console.log(result);
             }
-            $('.fakeloader').fadeOut();
         },
         error: function (result) {
             console.log(result);
-            $('.fakeloader').fadeOut();
         }
     })
 }
@@ -72,21 +72,20 @@ let animeEdit = function (id, number) {
         url: "https://zerorei.top/anime/notion.php?action=edit&id=" + id + "&number=" + number,
         dataType: "jsonp",
         beforeSend: function () {
-            $('.fakeloader').fadeIn();
+            $('.fake-loader').fadeIn();
         },
         complete: function () {
+            $('.fake-loader').fadeOut();
         },
         success: function (result) {
             if (result.code === 0) {
                 animeList();
             } else {
                 console.log(result);
-                $('.fakeloader').fadeOut();
             }
         },
         error: function (result) {
             console.log(result);
-            $('.fakeloader').fadeOut();
         }
     })
 }
