@@ -123,7 +123,7 @@ class Tools
 
     public static function log($logName, $logContent)
     {
-        $logDir = './log/';
+        $logDir = dirname(__FILE__) . '/log/';
         if (!file_exists($logDir)) {
             mkdir($logDir, 0755, true);
         }
