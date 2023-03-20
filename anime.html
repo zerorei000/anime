@@ -12,7 +12,7 @@
     * {
         margin: 0;
         padding: 0;
-        font-family: "微软雅黑",serif;
+        font-family: "微软雅黑", serif;
         color: #FFF;
     }
 
@@ -38,7 +38,7 @@
 
     body, input, select, button, textarea {
         font-size: 1.2rem;
-        font-family: "黑体",serif;
+        font-family: "黑体", serif;
     }
 
     button {
@@ -359,18 +359,48 @@
         $(".st9").css("width", (width / 9 * 0.5) + "px");
     }
 
-    $.ajax({
-        type: "GET",
-        url: "https://zerorei.top/anime/notion.php",
-        dataType: "jsonp",
-        success: function (result) {
-            if (result.code === 0) {
-                addTable(result.data);
+    let animeList = function () {
+        $.ajax({
+            type: "GET",
+            url: "https://zerorei.top/anime/notion.php",
+            dataType: "jsonp",
+            success: function (result) {
+                if (result.code === 0) {
+                    addTable(result.data);
+                }
+            },
+            error: function (result) {
+                console.log(result);
             }
-        },
-        error: function (result) {
-            console.log(result);
-        }
-    })
+        })
+        $('btn-prev').on('click', function () {
+            let old = $(this).attr('data-old');
+            let id = $(this).attr('data-id');
+            animeEdit(id, old - 1);
+        });
+        $('btn-next').on('click', function () {
+            let old = $(this).attr('data-old');
+            let id = $(this).attr('data-id');
+            animeEdit(id, old + 1);
+        });
+    }
+    animeList()
+
+    let animeEdit = function (id, number) {
+        $.ajax({
+            type: "GET",
+            url: "https://zerorei.top/anime/notion.php?action=edit&id" + id + "&number" + number,
+            dataType: "jsonp",
+            success: function (result) {
+                if (result.code === 0) {
+                    addTable(result.data);
+                }
+            },
+            error: function (result) {
+                console.log(result);
+            }
+        })
+        animeList();
+    }
 </script>
 </html>
