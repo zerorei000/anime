@@ -87,7 +87,7 @@ class NotionAPI
                 break;
             case 'boolean':
                 if ($field[$field['type']]) {
-                    $show = '<span class="field-boolean">[ √ ]</span>';
+                    $show = '<span class="field-boolean" style="color: blue;">[ √ ]</span>';
                 } else {
                     $show = '<span class="field-boolean">[ × ]</span>';
                 }
