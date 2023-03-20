@@ -39,7 +39,7 @@ foreach ($result['data']['results'] as $k => $row) {
     $data[$k]['推荐度'] = $notion->fieldShow($row['properties']['推荐度']);
     $data[$k]['更新'] = $notion->fieldShow($row['properties']['更新']);
     $data[$k]['特别篇'] = $notion->fieldShow($row['properties']['特别篇']);
-    $data[$k]['时间'] = $notion->fieldShow($row['properties']['编辑时间']);
+    $data[$k]['编辑时间'] = date('Y-m-d H:i:s', strtotime($notion->fieldShow($row['properties']['编辑时间'])));
     $data[$k]['状态'] = $notion->fieldShow($row['properties']['状态']);
 }
 Tools::show(0, 'success', $data);
