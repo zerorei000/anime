@@ -279,7 +279,7 @@
 
     /*=================================统一样式结束===================================*/
     table {
-        width: 1500px;
+        width: 90%;
         background: #000;
         margin: 10px auto;
         border-collapse: collapse;
@@ -347,7 +347,7 @@
         }
         $("table thead").empty().html(head);
         $("table tbody").empty().html(body);
-        let width = $("table").innerWidth();
+        let width = $("table").innerWidth(true);
         console.log(width);
         $(".st1").css("width", (width / 9 * 3.0) + "px");
         $(".st2").css("width", (width / 9 * 0.5) + "px");
