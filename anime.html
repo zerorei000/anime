@@ -327,7 +327,7 @@
 <div class="fakeloader"></div>
 </body>
 <script>
-    $('.fakeloader').fakeLoader();
+    $('.fakeloader').fakeLoader().fadeIn();
 
     //数据替换成自己需要用的数据
     let data = []
@@ -337,7 +337,7 @@
         let head = "";
         let body = "";
         let num = 0;
-        let width = $("table").width();
+        let width = $("table").width() - 20;
         head += '<tr>';//编写表头
         for (let j in features[0]) {
             head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
@@ -382,10 +382,14 @@
             success: function (result) {
                 if (result.code === 0) {
                     addTable(result.data);
+                } else {
+                    console.log(result);
+                    $('.fakeloader').fadeOut();
                 }
             },
             error: function (result) {
                 console.log(result);
+                $('.fakeloader').fadeOut();
             }
         })
     }
@@ -400,15 +404,18 @@
                 $('.fakeloader').fadeIn();
             },
             complete: function () {
-                $('.fakeloader').fadeOut();
             },
             success: function (result) {
                 if (result.code === 0) {
                     animeList();
+                } else {
+                    console.log(result);
+                    $('.fakeloader').fadeOut();
                 }
             },
             error: function (result) {
                 console.log(result);
+                $('.fakeloader').fadeOut();
             }
         })
     }
