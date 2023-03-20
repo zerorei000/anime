@@ -75,6 +75,29 @@ class NotionAPI
             case 'title':
                 $show = $field['title'][0]['plain_text'];
                 break;
+            case 'select':
+            case 'status':
+                $show = '<span style="color:' . $field['select']['color'] . '">' . $field['select']['name'] . '</span>';
+                break;
+            case 'multi_select':
+                $show = '';
+                foreach ($field['multi_select'] as $child) {
+                    $show .= '<span style="color:' . $child['color'] . '">' . $child['name'] . '</span>';
+                }
+                break;
+            case 'boolean':
+                if ($field['boolean']) {
+                    $show = '<span>[ √ ]</span>';
+                } else {
+                    $show = '<span>[ × ]</span>';
+                }
+                break;
+            case 'date':
+                $show = $field['date']['start'];
+                break;
+            case 'formula':
+                $show = $this->fieldShow($field['formula']);
+                break;
             default:
                 if (!is_array($field[$field['type']]) && $field[$field['type']]) {
                     $show = $field[$field['type']];
