@@ -129,7 +129,7 @@ class Tools
         }
         $logFile = $logDir . $logName . '.' . date("Ymd") . ".log";
         if (is_array($logContent)) {
-            $logContent = json_encode($logContent, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+            $logContent = json_encode($logContent);
         }
         $logContent = date('Y-m-d H:i:s') . "\t" . $logContent;
         file_put_contents($logFile, $logContent . PHP_EOL, FILE_APPEND | LOCK_EX);
