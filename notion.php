@@ -27,6 +27,7 @@ $params = array(
     )
 );
 $result = $notion->post('databases', NOTION_ANIME_DB_ID, 'query', $params);
+Tools::log('notion', $result);
 $data = [];
 foreach ($result['data']['results'] as $k => $row) {
     $data[$k]['译名'] = $notion->fieldShow($row['properties']['译名']);

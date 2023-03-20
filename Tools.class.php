@@ -120,4 +120,14 @@ class Tools
         }
         return $result;
     }
+
+    public static function log($logName, $logContent)
+    {
+        $logDir = './log/';
+        if (!file_exists($logDir)) {
+            mkdir($logDir, 0755, true);
+        }
+        $logFile = $logDir . $logName . '.' . date("Ymd") . ".log";
+        file_put_contents($logFile, $logContent, FILE_APPEND | LOCK_EX);
+    }
 }
