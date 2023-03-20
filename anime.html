@@ -389,7 +389,7 @@
     let animeEdit = function (id, number) {
         $.ajax({
             type: "GET",
-            url: "https://zerorei.top/anime/notion.php?action=edit&id" + id + "&number" + number,
+            url: "https://zerorei.top/anime/notion.php?action=edit&id=" + id + "&number=" + number,
             dataType: "jsonp",
             success: function (result) {
                 if (result.code === 0) {
