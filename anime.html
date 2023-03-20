@@ -372,7 +372,7 @@
     let animeList = function () {
         $.ajax({
             type: "GET",
-            url: "https://zerorei.top/anime/notion.php",
+            url: "https://zerorei.top/anime/notion.php?action=list",
             dataType: "jsonp",
             success: function (result) {
                 if (result.code === 0) {
@@ -393,14 +393,13 @@
             dataType: "jsonp",
             success: function (result) {
                 if (result.code === 0) {
-                    addTable(result.data);
+                    animeList();
                 }
             },
             error: function (result) {
                 console.log(result);
             }
         })
-        animeList();
     }
 </script>
 </html>
