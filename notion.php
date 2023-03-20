@@ -1,16 +1,6 @@
 <?php
-session_start();
-if(empty($_SESSION['admin']['userid']) && $_SERVER['REMOTE_ADDR'] != '127.0.0.1') {
-    exit;
-}
-header('Content-Type: application/javascript; charset=UTF-8');
-$callback = $_GET['callback'];
-require_once 'config.php';
-require_once 'NotionAPI.class.php';
-/**
- * Test表的test行的数列加1
- */
-//筛选行
+require_once 'Common.php';
+
 $notion = new NotionAPI(NOTION_SECRET);
 $params = array(
     'filter' => array(
@@ -36,8 +26,7 @@ $params = array(
         ),
     )
 );
-//获取到行所在page的id和内容
-$result = $notion->post('databases', '4b820d3e060a4373917461830d3f3736', 'query', $params);
+$result = $notion->post('databases', NOTION_ANIME_DB_ID, 'query', $params);
 $data = [];
 foreach ($result['data']['results'] as $k => $row) {
     foreach ($row['properties'] as $field => $col) {
@@ -51,8 +40,7 @@ foreach ($result['data']['results'] as $k => $row) {
         }
     }
 }
-//echo '<pre>';print_r(array($result, $data));
-echo $callback . '(' . json_encode($data) . ')';
+Tools::show(0, 'success', $data);
 //更新page的内容
 //$params = array(
 //    'properties' => array(
