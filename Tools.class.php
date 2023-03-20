@@ -128,6 +128,10 @@ class Tools
             mkdir($logDir, 0755, true);
         }
         $logFile = $logDir . $logName . '.' . date("Ymd") . ".log";
-        file_put_contents($logFile, $logContent, FILE_APPEND | LOCK_EX);
+        if (is_array($logContent)) {
+            $logContent = json_encode($logContent, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        }
+        $logContent = date('Y-m-d H:i:s') . "\t" . $logContent;
+        file_put_contents($logFile, $logContent . PHP_EOL, FILE_APPEND | LOCK_EX);
     }
 }
