@@ -382,6 +382,7 @@
             success: function (result) {
                 if (result.code === 0) {
                     addTable(result.data);
+                    $('.fakeloader').fadeOut();
                 } else {
                     console.log(result);
                     $('.fakeloader').fadeOut();
