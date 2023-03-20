@@ -1,307 +1,307 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "微软雅黑", serif;
-  color: #FFF;
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑", serif;
+    color: #FFF;
 }
 
 html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 img {
-  border: 0 none;
-  vertical-align: center;
+    border: 0 none;
+    vertical-align: center;
 }
 
 ul, li {
-  list-style-type: none;
-  margin: .0rem;
-  padding: .0rem;
+    list-style-type: none;
+    margin: .0rem;
+    padding: .0rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 body, input, select, button, textarea {
-  font-size: 1.2rem;
-  font-family: "黑体", serif;
+    font-size: 1.2rem;
+    font-family: "黑体", serif;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 i, em, cite {
-  font-style: normal;
+    font-style: normal;
 }
 
 aside section, .body {
-  display: block;
-  width: 100.0rem;
-  margin: 0 auto;
+    display: block;
+    width: 100.0rem;
+    margin: 0 auto;
 }
 
 a, a:link {
-  color: #AAA;
-  cursor: pointer;
-  text-decoration: none; /*设置a标签基本样式与伪类选择器设置*/
-  transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
+    color: #AAA;
+    cursor: pointer;
+    text-decoration: none; /*设置a标签基本样式与伪类选择器设置*/
+    transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
 }
 
 a:visited {
 }
 
 a:active, a:hover {
-  text-decoration: none;
-  color: #FC3;
+    text-decoration: none;
+    color: #FC3;
 }
 
 a:focus {
-  outline: none;
+    outline: none;
 }
 
 div {
-  width: 100.0rem;
-  float: left;
+    width: 100.0rem;
+    float: left;
 }
 
 div, img {
-  /* 硬件加速 */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
+    /* 硬件加速 */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 @media screen and (max-device-width: 1920px) {
-  html {
-    font-size: 90%;
-  }
+    html {
+        font-size: 90%;
+    }
 }
 
 @media screen and (max-device-width: 1600px) {
-  html {
-    font-size: 70%;
-  }
+    html {
+        font-size: 70%;
+    }
 }
 
 @media screen and (max-device-width: 1366px) {
-  html {
-    font-size: 62.5%;
-  }
+    html {
+        font-size: 62.5%;
+    }
 }
 
 @media screen and (max-device-width: 1023px) {
-  html {
-    font-size: 145%;
-  }
+    html {
+        font-size: 145%;
+    }
 }
 
 body {
-  font-size: 1.2rem;
-  overflow: hidden;
-  background-size: auto 100%;
-  background: #000 fixed center top;
-  scrollbar-arrow-color: #f4ae21; /*图6,三角箭头的颜色*/
-  scrollbar-face-color: #333; /*图5,立体滚动条的颜色*/
-  scrollbar-3dlight-color: #666; /*图1,立体滚动条亮边的颜色*/
-  scrollbar-highlight-color: #666; /*图2,滚动条空白部分的颜色*/
-  scrollbar-shadow-color: #999; /*图3,立体滚动条阴影的颜色*/
-  scrollbar-darkshadow-color: #666; /*图4,立体滚动条强阴影的颜色*/
-  scrollbar-track-color: #666; /*图7,立体滚动条背景颜色*/
-  scrollbar-base-color: #f8f8f8; /*滚动条的基本颜色*/
-  /*Cursor:url(mouse.cur); 自定义个性鼠标*/
+    font-size: 1.2rem;
+    overflow: hidden;
+    background-size: auto 100%;
+    background: #000 fixed center top;
+    scrollbar-arrow-color: #f4ae21; /*图6,三角箭头的颜色*/
+    scrollbar-face-color: #333; /*图5,立体滚动条的颜色*/
+    scrollbar-3dlight-color: #666; /*图1,立体滚动条亮边的颜色*/
+    scrollbar-highlight-color: #666; /*图2,滚动条空白部分的颜色*/
+    scrollbar-shadow-color: #999; /*图3,立体滚动条阴影的颜色*/
+    scrollbar-darkshadow-color: #666; /*图4,立体滚动条强阴影的颜色*/
+    scrollbar-track-color: #666; /*图7,立体滚动条背景颜色*/
+    scrollbar-base-color: #f8f8f8; /*滚动条的基本颜色*/
+    /*Cursor:url(mouse.cur); 自定义个性鼠标*/
 }
 
 #tppage li, #tppage span {
-  float: right;
-  padding: 0 .5rem;
+    float: right;
+    padding: 0 .5rem;
 }
 
 #tppage .lir * {
-  float: left;
+    float: left;
 }
 
 #tppage .lil * {
-  float: right;
+    float: right;
 }
 
 #tppage .lir, #tppage .lil, #tppage .go {
-  padding: 0 1.0rem;
-  width: auto;
-  float: right;
+    padding: 0 1.0rem;
+    width: auto;
+    float: right;
 }
 
 #tppage .lir, #tppage .lil {
-  width: 5.5rem;
+    width: 5.5rem;
 }
 
 #tppage .go {
-  width: auto;
-  padding: 0 1.0rem;
+    width: auto;
+    padding: 0 1.0rem;
 }
 
 #tppage .go .text {
-  width: 3.0rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  border: .1rem solid #FFF;
-  background: none;
-  float: left;
+    width: 3.0rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    border: .1rem solid #FFF;
+    background: none;
+    float: left;
 }
 
 #tppage .go .defbut {
-  width: 2.5rem;
-  height: 1.7rem;
-  line-height: 1.7rem;
-  float: left;
-  margin: 0 0 0 .5rem;
-  font-size: 1.0rem;
+    width: 2.5rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    float: left;
+    margin: 0 0 0 .5rem;
+    font-size: 1.0rem;
 }
 
 #checkbox {
-  width: 2.0rem;
-  height: 2.0rem;
-  line-height: 2.0rem;
-  text-align: center;
-  background: #555;
-  border: .1rem solid #FFF;
-  cursor: pointer;
-  transition: background 0.5s;
-  -moz-transition: background 0.5s;
-  -webkit-transition: background 0.5s;
-  -o-transition: background 0.5s;
+    width: 2.0rem;
+    height: 2.0rem;
+    line-height: 2.0rem;
+    text-align: center;
+    background: #555;
+    border: .1rem solid #FFF;
+    cursor: pointer;
+    transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
 }
 
 #checkbox:hover {
-  background: #7EC0EE;
+    background: #7EC0EE;
 }
 
 textarea {
-  background: none;
-  border: .1rem solid #FFF;
+    background: none;
+    border: .1rem solid #FFF;
 }
 
 html, body {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .orange {
-  color: #F26E01;
+    color: #F26E01;
 }
 
 .clear {
-  clear: both;
+    clear: both;
 }
 
 .bgcyes {
-  background: #7EC0EE;
+    background: #7EC0EE;
 }
 
 .bgcno {
-  background: #FF3030;
+    background: #FF3030;
 }
 
 .bgcok {
-  background: #EE9A00;
+    background: #EE9A00;
 }
 
 .defbut {
-  width: 8.0rem;
-  height: 2.4rem;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  border: none;
-  background: #666;
-  cursor: pointer;
-  transition: background 1s;
-  -moz-transition: background 1s;
-  -webkit-transition: background 1s;
-  -o-transition: background 1s;
+    width: 8.0rem;
+    height: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    border: none;
+    background: #666;
+    cursor: pointer;
+    transition: background 1s;
+    -moz-transition: background 1s;
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
 }
 
 .defbut:hover {
-  background: #F93;
+    background: #F93;
 }
 
 .SC {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .HD {
-  display: none;
+    display: none;
 }
 
 .ONEREM {
-  width: 1rem;
-  height: 1rem;
-  display: none;
+    width: 1rem;
+    height: 1rem;
+    display: none;
 }
 
 .fontsize14 {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 .select {
-  width: 10.0rem;
-  background: transparent;
-  -webkit-appearance: none;
-  height: 2.0rem;
-  line-height: 2.0rem;
-  border: .1rem solid #FFF;
+    width: 10.0rem;
+    background: transparent;
+    -webkit-appearance: none;
+    height: 2.0rem;
+    line-height: 2.0rem;
+    border: .1rem solid #FFF;
 }
 
 /*=================================统一样式结束===================================*/
 table {
-  width: 90%;
-  background: #000;
-  margin: 10px auto;
-  border-collapse: collapse;
+    width: 90%;
+    background: #000;
+    margin: 10px auto;
+    border-collapse: collapse;
 }
 
 th,
 td {
-  padding: 2px 0;
-  height: 25px;
-  line-height: 25px;
-  text-align: center;
-  border: 1px solid #CCC;
+    padding: 2px 0;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #CCC;
 }
 
 th {
-  background: #333;
-  font-weight: normal;
+    background: #333;
+    font-weight: normal;
 }
 
 tr {
-  background: #000;
+    background: #000;
 }
 
 tr:hover {
-  background: #222;
+    background: #222;
 }
 
 td a {
-  color: #06f;
-  text-decoration: none;
+    color: #06f;
+    text-decoration: none;
 }
 
 td a:hover {
-  color: #06f;
-  text-decoration: underline;
+    color: #06f;
+    text-decoration: underline;
 }
