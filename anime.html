@@ -357,6 +357,16 @@
         $(".st7").css("width", (width / 9 * 0.5) + "px");
         $(".st8").css("width", (width / 9 * 1.5) + "px");
         $(".st9").css("width", (width / 9 * 0.5) + "px");
+        $('.btn-prev').on('click', function () {
+            let old = $(this).attr('data-old');
+            let id = $(this).attr('data-id');
+            animeEdit(id, old - 1);
+        });
+        $('.btn-next').on('click', function () {
+            let old = $(this).attr('data-old');
+            let id = $(this).attr('data-id');
+            animeEdit(id, old + 1);
+        });
     }
 
     let animeList = function () {
@@ -373,16 +383,6 @@
                 console.log(result);
             }
         })
-        $('.btn-prev').on('click', function () {
-            let old = $(this).attr('data-old');
-            let id = $(this).attr('data-id');
-            animeEdit(id, old - 1);
-        });
-        $('.btn-next').on('click', function () {
-            let old = $(this).attr('data-old');
-            let id = $(this).attr('data-id');
-            animeEdit(id, old + 1);
-        });
     }
     animeList()
 
