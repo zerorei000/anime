@@ -65,6 +65,23 @@ class NotionAPI
         );
     }
 
+    public function fieldShow($field)
+    {
+        $show = '';
+        if (!isset($field['type'])) {
+            return $show;
+        }
+        switch ($field['type']) {
+            case 'title':
+                $show = $field['title'][0]['plain_text'];
+                break;
+            default:
+                !is_array($field[$field['type']]) && $show = $field[$field['type']];
+                break;
+        }
+        return $show;
+    }
+
     private function getUrl($type, $id = '', $method = '')
     {
         return sprintf($this->url, $this->v, $type, '/' . $id, '/' . $method);

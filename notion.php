@@ -29,16 +29,9 @@ $params = array(
 $result = $notion->post('databases', NOTION_ANIME_DB_ID, 'query', $params);
 $data = [];
 foreach ($result['data']['results'] as $k => $row) {
-    foreach ($row['properties'] as $field => $col) {
-        switch ($col['type']) {
-            case 'title':
-                $data[$k][$field] = $col['title'][0]['plain_text'];
-                break;
-            default:
-                !is_array($col[$col['type']]) && $data[$k][$field] = $col[$col['type']];
-                break;
-        }
-    }
+    $data[$k]['译名'] = $notion->fieldShow($row['properties']['译名']);
+    $data[$k]['进度'] = $notion->fieldShow($row['properties']['编辑']);
+    $data[$k]['时间'] = $notion->fieldShow($row['properties']['编辑时间']);
 }
 Tools::show(0, 'success', $data);
 //更新page的内容
