@@ -76,7 +76,9 @@ class NotionAPI
                 $show = $field['title'][0]['plain_text'];
                 break;
             default:
-                !is_array($field[$field['type']]) && $show = $field[$field['type']];
+                if (!is_array($field[$field['type']]) && $field[$field['type']]) {
+                    $show = $field[$field['type']];
+                }
                 break;
         }
         return $show;

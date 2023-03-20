@@ -60,24 +60,24 @@
 
     //直接把表头和表内全部载入
     let addTable = function (features) {
-        let hthead = "";
-        let htbody = "";
+        let head = "";
+        let body = "";
         let num = 0;
-        hthead += '<tr>';//编写表头
+        head += '<tr>';//编写表头
         for (let j in features[0]) {
-            hthead += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
+            head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
         }
-        hthead += '</tr>';
+        head += '</tr>';
         for (let i = 0, len = features.length; i < len; i++) {//编写表格
-            htbody += '<tr>';
+            body += '<tr>';
             num = 0;
             for (let j in features[i]) {
-                htbody += '<td><div class="st' + (++num) + '">' + features[i][j] + '</div></td>';
+                body += '<td><div class="st' + (++num) + '">' + features[i][j] + '</div></td>';
             }
-            htbody += '</tr>';
+            body += '</tr>';
         }
-        $("table thead").empty().html(hthead);
-        $("table tbody").empty().html(htbody);
+        $("table thead").empty().html(head);
+        $("table tbody").empty().html(body);
         $(".st1").css("width", (600 / 4) + "px");
         $(".st2").css("width", (600 / 4 * 0.3) + "px");
         $(".st3").css("width", (600 / 4 * 1.8) + "px");
