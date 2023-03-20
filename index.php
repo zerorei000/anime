@@ -1,3 +1,3 @@
 <?php
 require_once 'Common.php';
-require_once 'anime.php';
+require_once 'templates/anime.tpl';
