@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>Anime</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<style>
+table {
+    width: 90%;
+    background: #ccc;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+th,
+td {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+th {
+    background: #eee;
+    font-weight: normal;
+}
+tr {
+    background: #fff;
+}
+tr:hover {
+    background: #dbb0ff;
+}
+td a {
+    color: #06f;
+    text-decoration: none;
+}
+td a:hover {
+    color: #06f;
+    text-decoration: underline;
+}  
+</style>
+<body>
+  <!-- 表格去除空隙 -->
+  <table border="0" cellpadding="0" cellspacing="0"> 
+      <thead></thead>
+      <tbody></tbody>
+  </table>
+</body>  
+<script>
+//数据替换成自己需要用的数据
+var data = []
+
+//直接把表头和表内全部载入
+var addTableF = function (features) {
+  var hthead = "";
+  var htbody = "";
+  var num = 0;
+  hthead += '<tr>';//编写表头
+  for (var j in features[0]) {
+    hthead += '<th><div class="st'+(++num)+'">' + j + '</div></th>';
+  }
+  hthead += '</tr>';
+  for (i = 0, len = features.length; i < len; i++) {//编写表格
+    htbody += '<tr>';
+    num=0;
+    for (var j in features[i]) {
+      htbody += '<td><div class="st'+(++num)+'">' + features[i][j] + '</div></td>';
+    }
+    htbody += '</tr>';
+  }
+  $("table thead").empty().html(hthead);
+  $("table tbody").empty().html(htbody);
+  $(".st1").css("width",(600/4*1.0)+"px");
+  $(".st2").css("width",(600/4*0.3)+"px");
+  $(".st3").css("width",(600/4*1.8)+"px");
+}
+addTableF(data);
+
+$.ajax({
+    type: "GET",
+    url: "https://zerorei.top/anime/notion.php",
+    dataType: "jsonp",
+    success: function(result) {
+        addTableF(result);
+    },
+    error: function(result) {
+        console.log(result);
+    }
+})
+</script>
+</html>
