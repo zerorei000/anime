@@ -332,6 +332,7 @@
         let head = "";
         let body = "";
         let num = 0;
+        let width = $("table").innerWidth();
         head += '<tr>';//编写表头
         for (let j in features[0]) {
             head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
@@ -347,8 +348,6 @@
         }
         $("table thead").empty().html(head);
         $("table tbody").empty().html(body);
-        let width = $("table").innerWidth(true);
-        console.log(width);
         $(".st1").css("width", (width / 9 * 3.0) + "px");
         $(".st2").css("width", (width / 9 * 0.5) + "px");
         $(".st3").css("width", (width / 9 * 0.5) + "px");
