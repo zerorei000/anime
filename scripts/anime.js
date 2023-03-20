@@ -75,17 +75,18 @@ let animeEdit = function (id, number) {
             $('.fake-loader').fadeIn();
         },
         complete: function () {
-            $('.fake-loader').fadeOut();
         },
         success: function (result) {
             if (result.code === 0) {
                 animeList();
             } else {
                 console.log(result);
+                $('.fake-loader').fadeOut();
             }
         },
         error: function (result) {
             console.log(result);
+            $('.fake-loader').fadeOut();
         }
     })
 }
