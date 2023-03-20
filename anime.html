@@ -324,6 +324,7 @@
     <thead></thead>
     <tbody></tbody>
 </table>
+<div class="fakeloader"></div>
 </body>
 <script>
     //数据替换成自己需要用的数据
@@ -334,7 +335,7 @@
         let head = "";
         let body = "";
         let num = 0;
-        let width = $("table").innerWidth();
+        let width = $("table").width();
         head += '<tr>';//编写表头
         for (let j in features[0]) {
             head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
@@ -394,11 +395,9 @@
             url: "https://zerorei.top/anime/notion.php?action=edit&id=" + id + "&number=" + number,
             dataType: "jsonp",
             beforeSend: function () {
-                console.log('test1');
                 $('.fakeloader').fadeIn();
             },
             complete: function () {
-                console.log('test2');
                 $('.fakeloader').fadeOut();
             },
             success: function (result) {
