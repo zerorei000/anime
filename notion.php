@@ -21,13 +21,16 @@ $params = array(
     ),
     'sorts' => array(
         array(
+            'property' => '更新',
+            'direction' => 'ascending',
+        ),
+        array(
             'property' => '推荐度',
             'direction' => 'descending',
         ),
     )
 );
 $result = $notion->post('databases', NOTION_ANIME_DB_ID, 'query', $params);
-Tools::log('notion', $result);
 $data = [];
 foreach ($result['data']['results'] as $k => $row) {
     $data[$k]['译名'] = $notion->fieldShow($row['properties']['译名']);
