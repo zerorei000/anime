@@ -9,6 +9,7 @@ let addTable = function (features) {
     for (let j in features[0]) {
         head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
     }
+    console.log($("table").css('font-size'));
     let width = $("table").width() - num * 2;
     head += '</tr>';
     for (let i = 0, len = features.length; i < len; i++) {//编写表格
