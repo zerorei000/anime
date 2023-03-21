@@ -298,15 +298,6 @@ tr:hover {
     background: #222;
 }
 
-td a {
-    color: #06f;
-    text-decoration: none;
-}
-
-td a:hover {
-    color: #06f;
-}
-
 .tools-bar {
     font-size: 1.3rem;
     width: 100%;
