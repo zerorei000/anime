@@ -305,7 +305,7 @@ tr:hover {
     margin: .625rem auto;
 }
 
-.focus {
+.tools-bar .btn .focus {
     color: #FC3;
 }
 
