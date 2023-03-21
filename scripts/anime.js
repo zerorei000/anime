@@ -10,7 +10,7 @@ let addTable = function (features) {
     size = Number(size.substr(0, size.length - 2));
     head += '<tr>';//编写表头
     for (let j in features[0]) {
-        if (size > 20 && num > 4) {
+        if (size > 20 && num > 3) {
             continue;
         }
         head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
@@ -21,7 +21,7 @@ let addTable = function (features) {
         body += '<tr>';
         num = 0;
         for (let j in features[i]) {
-            if (size > 20 && num > 4) {
+            if (size > 20 && num > 3) {
                 continue;
             }
             body += '<td><div class="st' + (++num) + '">' + features[i][j] + '</div></td>';
@@ -30,15 +30,22 @@ let addTable = function (features) {
     }
     $("table thead").empty().html(head);
     $("table tbody").empty().html(body);
-    $(".st1").css("width", (width / num * 3.0) + "px");
-    $(".st2").css("width", (width / num * 0.5) + "px");
-    $(".st3").css("width", (width / num * 0.5) + "px");
-    $(".st4").css("width", (width / num * 1.5) + "px");
-    $(".st5").css("width", (width / num * 0.5) + "px");
-    $(".st6").css("width", (width / num * 0.5) + "px");
-    $(".st7").css("width", (width / num * 0.5) + "px");
-    $(".st8").css("width", (width / num * 1.5) + "px");
-    $(".st9").css("width", (width / num * 0.5) + "px");
+    if (size > 20) {
+        $(".st1").css("width", (width / num * 2) + "px");
+        $(".st2").css("width", (width / num * 0.5) + "px");
+        $(".st3").css("width", (width / num * 0.5) + "px");
+        $(".st4").css("width", (width / num) + "px");
+    } else {
+        $(".st1").css("width", (width / num * 3.0) + "px");
+        $(".st2").css("width", (width / num * 0.5) + "px");
+        $(".st3").css("width", (width / num * 0.5) + "px");
+        $(".st4").css("width", (width / num * 1.5) + "px");
+        $(".st5").css("width", (width / num * 0.5) + "px");
+        $(".st6").css("width", (width / num * 0.5) + "px");
+        $(".st7").css("width", (width / num * 0.5) + "px");
+        $(".st8").css("width", (width / num * 1.5) + "px");
+        $(".st9").css("width", (width / num * 0.5) + "px");
+    }
     $('.btn-prev').on('click', function () {
         let old = $(this).attr('data-old');
         let id = $(this).attr('data-id');
