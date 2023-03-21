@@ -15,6 +15,7 @@
     <a href="javascript:void(0)" class="btn btn-week btn-week-day-4" data-day="4">木星</a>
     <a href="javascript:void(0)" class="btn btn-week btn-week-day-5" data-day="5">金星</a>
     <a href="javascript:void(0)" class="btn btn-week btn-week-day-6" data-day="6">土星</a>
+    <a href="javascript:void(0)" class="btn btn-week btn-week-day" data-day="">今日</a>
 </div>
 <table>
     <thead></thead>
