@@ -1,7 +1,13 @@
 
 $('.fake-loader').fakeLoader().fadeIn();
 
+window.onresize=function(){
+    addTable(tempFeatures);
+}
+
+let tempFeatures;
 let addTable = function (features) {
+    tempFeatures = features;
     let head = "";
     let body = "";
     let num = 0;
@@ -36,10 +42,10 @@ let addTable = function (features) {
         $(".st3").css("width", (width / num * 0.5) + "px");
         $(".st4").css("width", (width / num) + "px");
     } else {
-        $(".st1").css("width", (width / num * 3.0) + "px");
+        $(".st1").css("width", (width / num * 3.5) + "px");
         $(".st2").css("width", (width / num * 0.5) + "px");
         $(".st3").css("width", (width / num * 0.5) + "px");
-        $(".st4").css("width", (width / num * 1.5) + "px");
+        $(".st4").css("width", (width / num) + "px");
         $(".st5").css("width", (width / num * 0.5) + "px");
         $(".st6").css("width", (width / num * 0.5) + "px");
         $(".st7").css("width", (width / num * 0.5) + "px");
