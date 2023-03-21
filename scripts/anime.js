@@ -52,12 +52,12 @@ let addTable = function (features) {
         $(".st8").css("width", (width / num * 1.5) + "px");
         $(".st9").css("width", (width / num * 0.5) + "px");
     }
-    $('.btn-prev').on('click', function () {
+    $('.btn-prev').off('click').on('click', function () {
         let old = $(this).attr('data-old');
         let id = $(this).attr('data-id');
         animeEdit(id, Number(old) - 1);
     });
-    $('.btn-next').on('click', function () {
+    $('.btn-next').off('click').on('click', function () {
         let old = $(this).attr('data-old');
         let id = $(this).attr('data-id');
         animeEdit(id, Number(old) + 1);
