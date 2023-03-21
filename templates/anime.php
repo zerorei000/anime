@@ -3,8 +3,8 @@
     <title>Anime</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>/css/fakeLoader.css">
-<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>/css/anime.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>/css/fakeLoader.css?<?php echo date('YmdHis') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>/css/anime.css?<?php echo date('YmdHis') ?>">
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <body>
 <div class="tools-bar">
@@ -26,6 +26,6 @@
 <script>
     let siteUrl = '<?php echo SITE_URL ?>';
 </script>
-<script src="<?php echo SITE_URL ?>/scripts/fakeLoader.min.js"></script>
-<script src="<?php echo SITE_URL ?>/scripts/anime.js"></script>
+<script src="<?php echo SITE_URL ?>/scripts/fakeLoader.min.js?<?php echo date('YmdHis') ?>"></script>
+<script src="<?php echo SITE_URL ?>/scripts/anime.js?<?php echo date('YmdHis') ?>"></script>
 </html>
