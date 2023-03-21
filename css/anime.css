@@ -349,6 +349,7 @@ td a:hover {
     padding: 0 1rem;
     font-weight: bold;
     color: #808080;
+    text-decoration: none;
 }
 
 .color-red {
