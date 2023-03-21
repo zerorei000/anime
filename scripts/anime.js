@@ -55,7 +55,9 @@ let animeList = function () {
         },
         success: function (result) {
             if (result.code === 0) {
-                addTable(result.data);
+                $('.btn-week').removeClass('focus');
+                $('.btn-week-day-' + result.data.weekday).addClass('focus');
+                addTable(result.data.content);
             } else {
                 console.log(result);
             }

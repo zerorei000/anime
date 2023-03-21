@@ -306,3 +306,7 @@ td a:hover {
     color: #06f;
     text-decoration: underline;
 }
+
+.focus {
+    font-weight: bold;
+}
