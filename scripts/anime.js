@@ -42,10 +42,10 @@ let addTable = function (features) {
     });
 }
 
-let animeList = function () {
+let animeList = function (weekday) {
     $.ajax({
         type: "GET",
-        url: siteUrl + "/notion.php?action=list",
+        url: siteUrl + "/notion.php?action=list&weekday=" + weekday,
         dataType: "jsonp",
         beforeSend: function () {
             $('.fake-loader').fadeIn();
@@ -67,7 +67,7 @@ let animeList = function () {
         }
     })
 }
-animeList()
+animeList(location.hash)
 
 let animeEdit = function (id, number) {
     $.ajax({
@@ -93,3 +93,9 @@ let animeEdit = function (id, number) {
         }
     })
 }
+
+$('.btn-week').on('click', function () {
+    let weekday = $(this).attr('data-day');
+    location.hash = weekday;
+    animeList(weekday);
+});
