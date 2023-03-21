@@ -9,3 +9,4 @@ require_once 'classes/NotionAPI.class.php';
 require_once 'classes/Tools.class.php';
 
 const SITE_URL = 'https://zerorei.top/anime';
+const VERSION = '20230321';

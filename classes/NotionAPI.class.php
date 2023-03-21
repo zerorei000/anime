@@ -82,7 +82,7 @@ class NotionAPI
             case 'multi_select':
                 $show = '';
                 foreach ($field[$field['type']] as $child) {
-                    $show .= '<span class="field-select" style="color:' . $child['color'] . '">' . $child['name'] . '</span>';
+                    $show .= '<span class="field-select" style="background:' . $child['color'] . '">' . $child['name'] . '</span>';
                 }
                 break;
             case 'boolean':
