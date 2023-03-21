@@ -7,6 +7,7 @@ let addTable = function (features) {
     let num = 0;
     let table = $("table");
     let size = table.css('font-size');
+    size = Number(size.substr(0, size.length - 2));
     head += '<tr>';//编写表头
     for (let j in features[0]) {
         if (size > 20 && num > 5) {
@@ -75,7 +76,7 @@ let animeList = function (weekday) {
         }
     })
 }
-animeList(location.hash.substring(1))
+animeList(location.hash.substr(1))
 
 let animeEdit = function (id, number) {
     $.ajax({
