@@ -306,7 +306,7 @@ tr:hover {
 }
 
 .tools-bar .focus {
-    color: #FC3;
+    border-color: #FC3;
 }
 
 .field-select {
