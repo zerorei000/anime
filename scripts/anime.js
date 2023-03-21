@@ -1,5 +1,4 @@
 
-let siteUrl = '<?php echo SITE_URL ?>';
 $('.fake-loader').fakeLoader().fadeIn();
 
 let addTable = function (features) {

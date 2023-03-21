@@ -6,7 +6,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>/css/fakeLoader.css">
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>/css/anime.css">
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="<?php echo SITE_URL ?>/scripts/fakeLoader.min.js"></script>
 <body>
 <!-- 表格去除空隙 -->
 <table>
@@ -15,5 +14,9 @@
 </table>
 <div class="fake-loader"></div>
 </body>
+<script>
+    let siteUrl = '<?php echo SITE_URL ?>';
+</script>
+<script src="<?php echo SITE_URL ?>/scripts/fakeLoader.min.js"></script>
 <script src="<?php echo SITE_URL ?>/scripts/anime.js"></script>
 </html>
