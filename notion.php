@@ -20,7 +20,7 @@ if ($action == 'edit') {
             'and' => array(
                 array(
                     'property' => '更新',
-                    'checkbox' => array(
+                    'select' => array(
                         'equals' => $weekDays[date('w')],
                     ),
                 ),
