@@ -268,7 +268,7 @@ html, body {
 
 /*=================================统一样式结束===================================*/
 table {
-    font-size: 1.0rem;
+    font-size: 1.5rem;
     width: 90%;
     background: #000;
     margin: .625rem auto;
@@ -309,7 +309,7 @@ td a:hover {
 }
 
 .tools-bar {
-    font-size: 1.0rem;
+    font-size: 1.5rem;
     width: 100%;
     text-align: center;
     margin: .625rem auto;
