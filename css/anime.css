@@ -306,7 +306,7 @@ tr:hover {
 }
 
 .focus {
-    font-weight: bold;
+    color: #FC3;
 }
 
 .field-select {
