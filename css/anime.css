@@ -326,3 +326,8 @@ td a:hover {
     color: #FFF;
     opacity: 0.7;
 }
+
+.field-select span {
+    color: #FFF;
+    opacity: 1;
+}

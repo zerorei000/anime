@@ -77,12 +77,12 @@ class NotionAPI
                 break;
             case 'select':
             case 'status':
-                $show = '<span class="field-select" style="background:' . $field[$field['type']]['color'] . '">' . $field[$field['type']]['name'] . '</span>';
+                $show = '<span class="field-select" style="background:' . $field[$field['type']]['color'] . '"><span>' . $field[$field['type']]['name'] . '</span></span>';
                 break;
             case 'multi_select':
                 $show = '';
                 foreach ($field[$field['type']] as $child) {
-                    $show .= '<span class="field-select" style="background:' . $child['color'] . '">' . $child['name'] . '</span>';
+                    $show .= '<span class="field-select" style="background:' . $child['color'] . '"><span>' . $child['name'] . '</span></span>';
                 }
                 break;
             case 'boolean':
