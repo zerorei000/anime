@@ -270,18 +270,18 @@ html, body {
 table {
     width: 90%;
     background: #000;
-    margin: 10px auto;
+    margin: .625rem auto;
     border-collapse: collapse;
     border-style: solid;
 }
 
 th,
 td {
-    padding: 2px 0;
-    height: 25px;
-    line-height: 25px;
+    padding: .13rem 0;
+    height: 1.6rem;
+    line-height: 1.6rem;
     text-align: center;
-    border: 1px solid #CCC;
+    border: .1rem solid #CCC;
 }
 
 th {
@@ -310,7 +310,7 @@ td a:hover {
 .tools-bar {
     width: 100%;
     text-align: center;
-    margin: 10px auto;
+    margin: .625rem auto;
 }
 
 .focus {
