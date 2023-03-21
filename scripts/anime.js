@@ -67,7 +67,7 @@ let animeList = function (weekday) {
         }
     })
 }
-animeList(location.hash)
+animeList(location.hash.substring(1))
 
 let animeEdit = function (id, number) {
     $.ajax({
