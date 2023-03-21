@@ -5,17 +5,24 @@ let addTable = function (features) {
     let head = "";
     let body = "";
     let num = 0;
+    let table = $("table");
+    let size = table.css('font-size');
     head += '<tr>';//编写表头
     for (let j in features[0]) {
+        if (size > 20 && num > 5) {
+            continue;
+        }
         head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
     }
-    console.log($("table").css('font-size'));
-    let width = $("table").width() - num * 2;
+    let width = table.width() - num * 2;
     head += '</tr>';
     for (let i = 0, len = features.length; i < len; i++) {//编写表格
         body += '<tr>';
         num = 0;
         for (let j in features[i]) {
+            if (size > 20 && num > 5) {
+                continue;
+            }
             body += '<td><div class="st' + (++num) + '">' + features[i][j] + '</div></td>';
         }
         body += '</tr>';
