@@ -278,7 +278,7 @@ table {
 
 th,
 td {
-    padding: .13rem 0;
+    padding: .12rem 0;
     height: 1.6rem;
     line-height: 1.6rem;
     text-align: center;
@@ -309,7 +309,7 @@ td a:hover {
 }
 
 .tools-bar {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 100%;
     text-align: center;
     margin: .625rem auto;
