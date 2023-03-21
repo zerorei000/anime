@@ -15,7 +15,8 @@ if ($action == 'edit') {
     Tools::show(0, 'success', $result);
 } else {
     $weekdays = array('太阳','月亮','火星','水星','木星','金星','土星');
-    $weekday = Tools::getValue('weekday', date('w'));;
+    $weekday = Tools::getValue('weekday');
+    $weekday = in_array($weekday, $weekdays) ? $weekday : date('w');
     $params = array(
         'filter' => array(
             'and' => array(
