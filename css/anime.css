@@ -329,15 +329,17 @@ td a:hover {
 .field-boolean-true {
     border: none;
     border-radius: 0.1rem;
-    padding: 0 1rem;
+    padding: 0 0.4rem;
+    font-weight: bold;
     background: dodgerblue;
     color: #fff;
 }
 
 .field-boolean-false {
-    border: 0.3rem solid #fff;
+    border: 0.2rem solid #fff;
     border-radius: 0.1rem;
-    padding: 0 1rem;
+    padding: 0 0.4rem;
+    font-weight: bold;
     color: #fff;
 }
 
