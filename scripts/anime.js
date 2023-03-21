@@ -10,7 +10,7 @@ let addTable = function (features) {
     size = Number(size.substr(0, size.length - 2));
     head += '<tr>';//编写表头
     for (let j in features[0]) {
-        if (size > 20 && num > 5) {
+        if (size > 20 && num > 4) {
             continue;
         }
         head += '<th><div class="st' + (++num) + '">' + j + '</div></th>';
@@ -21,7 +21,7 @@ let addTable = function (features) {
         body += '<tr>';
         num = 0;
         for (let j in features[i]) {
-            if (size > 20 && num > 5) {
+            if (size > 20 && num > 4) {
                 continue;
             }
             body += '<td><div class="st' + (++num) + '">' + features[i][j] + '</div></td>';
