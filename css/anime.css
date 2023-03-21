@@ -307,6 +307,12 @@ td a:hover {
     text-decoration: underline;
 }
 
+.tools-bar {
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
+}
+
 .focus {
     font-weight: bold;
 }
