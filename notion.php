@@ -14,19 +14,20 @@ if ($action == 'edit') {
     $result = $notion->patch('pages', $id, $params);
     Tools::show(0, 'success', $result);
 } else {
+    $weekDays = array('太阳','月亮','火星','水星','木星','金星','土星');
     $params = array(
         'filter' => array(
             'and' => array(
                 array(
-                    'property' => '今天更新',
+                    'property' => '更新',
                     'checkbox' => array(
-                        'equals' => true, //搜索行名
+                        'equals' => $weekDays[date('w')],
                     ),
                 ),
                 array(
                     'property' => '状态',
                     'status' => array(
-                        'equals' => '追番', //搜索行名
+                        'equals' => '追番',
                     ),
                 ),
             ),

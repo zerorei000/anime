@@ -1,3 +1,5 @@
+
+let siteUrl = '<?php echo SITE_URL ?>';
 $('.fake-loader').fakeLoader().fadeIn();
 
 let addTable = function (features) {
@@ -44,7 +46,7 @@ let addTable = function (features) {
 let animeList = function () {
     $.ajax({
         type: "GET",
-        url: "https://zerorei.top/anime/notion.php?action=list",
+        url: siteUrl + "/notion.php?action=list",
         dataType: "jsonp",
         beforeSend: function () {
             $('.fake-loader').fadeIn();
@@ -69,7 +71,7 @@ animeList()
 let animeEdit = function (id, number) {
     $.ajax({
         type: "GET",
-        url: "https://zerorei.top/anime/notion.php?action=edit&id=" + id + "&number=" + number,
+        url: siteUrl + "/notion.php?action=edit&id=" + id + "&number=" + number,
         dataType: "jsonp",
         beforeSend: function () {
             $('.fake-loader').fadeIn();

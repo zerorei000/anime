@@ -272,6 +272,7 @@ table {
     background: #000;
     margin: 10px auto;
     border-collapse: collapse;
+    border-style: solid;
 }
 
 th,

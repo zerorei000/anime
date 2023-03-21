@@ -9,7 +9,7 @@
 <script src="<?php echo SITE_URL ?>/scripts/fakeLoader.min.js"></script>
 <body>
 <!-- 表格去除空隙 -->
-<table border="0" cellpadding="0" cellspacing="0">
+<table>
     <thead></thead>
     <tbody></tbody>
 </table>
