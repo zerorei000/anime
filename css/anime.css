@@ -343,6 +343,14 @@ td a:hover {
     color: #fff;
 }
 
+.btn {
+    border: 0.2rem solid #808080;
+    border-radius: 0.2rem;
+    padding: 0 1rem;
+    font-weight: bold;
+    color: #808080;
+}
+
 .color-red {
     background: rgba(255, 0, 0, 0.7);
 }

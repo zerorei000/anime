@@ -51,7 +51,7 @@ if ($action == 'edit') {
         $content[$k]['译名'] = $notion->fieldShow($row['properties']['译名']);
         $content[$k]['进度'] = $notion->fieldShow($row['properties']['进度']);
         $content[$k]['编辑'] = $notion->fieldShow($row['properties']['最近编辑']);
-        $content[$k]['操作'] = '<a href="javascript:void(0)" class="btn btn-prev" data-old="' . $content[$k]['进度'] . '" data-id="' . $row['id'] . '">减一</a>&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn-next" data-old="' . $content[$k]['进度'] . '" data-id="' . $row['id'] . '">加一</a>';
+        $content[$k]['操作'] = '<a href="javascript:void(0)" class="btn btn-prev" data-old="' . $content[$k]['进度'] . '" data-id="' . $row['id'] . '"><</a>&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn-next" data-old="' . $content[$k]['进度'] . '" data-id="' . $row['id'] . '">></a>';
         $content[$k]['推荐度'] = $notion->fieldShow($row['properties']['推荐度']);
         $content[$k]['更新'] = $notion->fieldShow($row['properties']['更新']);
         $content[$k]['特别篇'] = $notion->fieldShow($row['properties']['特别篇']);
