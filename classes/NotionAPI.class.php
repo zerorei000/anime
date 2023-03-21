@@ -77,7 +77,7 @@ class NotionAPI
                 break;
             case 'select':
             case 'status':
-                $show = '<span class="field-select" style="color:' . $field[$field['type']]['color'] . '">' . $field[$field['type']]['name'] . '</span>';
+                $show = '<span class="field-select" style="background:' . $field[$field['type']]['color'] . '">' . $field[$field['type']]['name'] . '</span>';
                 break;
             case 'multi_select':
                 $show = '';
