@@ -322,7 +322,22 @@ td a:hover {
 .field-select {
     border: none;
     border-radius: 0.3rem;
-    padding: 0 0.2rem;
+    padding: 0 0.3rem;
+    color: #fff;
+}
+
+.field-boolean-true {
+    border: none;
+    border-radius: 0.1rem;
+    padding: 0 1rem;
+    background: dodgerblue;
+    color: #fff;
+}
+
+.field-boolean-false {
+    border: 0.3rem solid #fff;
+    border-radius: 0.1rem;
+    padding: 0 1rem;
     color: #fff;
 }
 
@@ -335,19 +350,19 @@ td a:hover {
 }
 
 .color-orange {
-    background: rgba(255, 165, 0, 0.7);
+    background: rgba(255, 100, 0, 0.7);
 }
 
 .color-blue {
-    background: rgba(0, 0, 255, 0.7);
+    background: rgba(0, 0, 200, 0.7);
 }
 
 .color-green {
-    background: rgba(0, 255, 0, 0.7);
+    background: rgba(0, 200, 0, 0.7);
 }
 
 .color-yellow {
-    background: rgba(255, 255, 0, 0.7);
+    background: rgba(255, 180, 0, 0.7);
 }
 
 .color-brown {
