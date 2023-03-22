@@ -110,7 +110,7 @@ html {
 
 body {
     font-size: 1.2rem;
-    overflow: hidden;
+    overflow: scroll;
     background-size: auto 100%;
     background: #000 fixed center top;
     scrollbar-arrow-color: #f4ae21; /*图6,三角箭头的颜色*/
