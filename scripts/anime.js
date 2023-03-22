@@ -103,7 +103,7 @@ let animeEdit = function (id, number) {
         },
         success: function (result) {
             if (result.code === 0) {
-                animeList();
+                animeList(location.hash.substr(1));
             } else {
                 console.log(result);
                 $('.fake-loader').fadeOut();
