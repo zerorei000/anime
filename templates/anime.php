@@ -5,7 +5,7 @@
 </head>
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>/css/fakeLoader.css?<?php echo VERSION ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL ?>/css/anime.css?<?php echo VERSION ?>">
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="<?php echo SITE_URL ?>/scripts/jquery-3.3.1.js"></script>
 <body>
 <div class="tools-bar">
     <a href="javascript:void(0)" class="btn btn-week btn-week-day-0" data-day="0">太阳</a>
