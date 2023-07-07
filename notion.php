@@ -43,6 +43,10 @@ if ($action == 'edit') {
                 'property' => '推荐度',
                 'direction' => 'descending',
             ),
+            array(
+                'property' => '开播日期',
+                'direction' => 'ascending',
+            ),
         )
     );
     $result = $notion->post('databases', NOTION_ANIME_DB_ID, 'query', $params);
