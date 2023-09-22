@@ -21,9 +21,37 @@ if ($action == 'edit') {
         'filter' => array(
             'and' => array(
                 array(
-                    'property' => '更新',
-                    'select' => array(
-                        'equals' => $weekdays[$weekday],
+                    'or' => array(
+                        array(
+                            'property' => '更新',
+                            'select' => array(
+                                'equals' => $weekdays[$weekday],
+                            ),
+                        ),
+                        array(
+                            'property' => '更新',
+                            'select' => array(
+                                'equals' => '月更',
+                            ),
+                        ),
+                        array(
+                            'property' => '更新',
+                            'select' => array(
+                                'equals' => '日更',
+                            ),
+                        ),
+                        array(
+                            'property' => '更新',
+                            'select' => array(
+                                'equals' => '不定期',
+                            ),
+                        ),
+                        array(
+                            'property' => '更新',
+                            'select' => array(
+                                'equals' => '10',
+                            ),
+                        ),
                     ),
                 ),
                 array(
