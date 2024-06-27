@@ -85,7 +85,12 @@ if ($action == 'edit') {
         $content[$k]['编辑'] = $notion->fieldShow($row['properties']['最近编辑']);
         $old = $content[$k]['进度'];
         if (!is_numeric($content[$k]['进度'])) {
-            $old = 0;
+            $temp = explode(' ', $content[$k]['进度']);
+            if (isset($temp[1]) && is_numeric($temp[1])) {
+                $old = $temp[1];
+            } else {
+                $old = 0;
+            }
         }
         $content[$k]['操作'] = '<a href="javascript:void(0)" class="btn btn-prev" data-old="' . $old . '" data-id="' . $row['id'] . '"><</a>&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn-next" data-old="' . $old . '" data-id="' . $row['id'] . '">></a>';
         $content[$k]['推荐度'] = $notion->fieldShow($row['properties']['推荐度']);
