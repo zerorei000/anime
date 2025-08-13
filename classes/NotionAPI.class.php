@@ -109,7 +109,9 @@ class NotionAPI
 
     private function getUrl($type, $id = '', $method = '')
     {
-        return sprintf($this->url, $this->v, $type, '/' . $id, '/' . $method);
+        !empty($id) && $id = '/' . $id;
+        !empty($method) && $method = '/' . $method;
+        return sprintf($this->url, $this->v, $type, $id, $method);
     }
 
     private function curlInit($url)
