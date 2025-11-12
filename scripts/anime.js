@@ -62,6 +62,10 @@ let addTable = function (features) {
         let id = $(this).attr('data-id');
         animeEdit(id, Number(old) + 1);
     });
+    $('tr').off('click').on('click', function () {
+        $('tr').removeClass('lock');
+        $(this).addClass('lock');
+    });
 }
 
 let animeList = function (weekday) {

@@ -295,7 +295,8 @@ tr {
     background: #000;
 }
 
-tr:hover {
+tr:hover,
+.lock {
     background: #222;
 }
 
