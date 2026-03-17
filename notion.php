@@ -46,12 +46,6 @@ if ($action == 'edit') {
                                 'equals' => '不定期',
                             ),
                         ),
-                        array(
-                            'property' => '更新',
-                            'select' => array(
-                                'equals' => '10',
-                            ),
-                        ),
                     ),
                 ),
                 array(
